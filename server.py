@@ -79,7 +79,8 @@ while True:
         with open('./log.csv', mode='a', newline='') as f:
             w = csv.writer(f)
             w.writerow(data)
-            print(data)
+            print("[{0}]: Debug -> data: {1}".format(
+                (timestamp, data)))
     else:
         break
 
@@ -91,4 +92,3 @@ if client_socket is not None:
         pass
 server_socket.close()
 print('サーバー側終了です')
-
