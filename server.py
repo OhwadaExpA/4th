@@ -75,7 +75,7 @@ while True:
         server_socket.close()
         exit(1)
 
-    if recvline is not None or recvline != '':
+    if recvline is not None and recvline != '':
         with open('./log.csv', mode='a', newline='') as f:
             w = csv.writer(f)
             w.writerow(data)
